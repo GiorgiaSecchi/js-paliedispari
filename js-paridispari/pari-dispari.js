@@ -23,11 +23,11 @@
 //! RACCOLTA DATI
 // chiedere all'utente di scegliere pari o dispari e inserire la scelta (input)
 let userChoise = prompt("Pari o Dispari ? \n Scrivi la tua scelta:");
-console.log(userChoise);
+console.log("Hai scelto:" + " " + userChoise);
 
 // chiedere all'utente di inserire un numero da 1 a 5
 let userNumber = parseInt(prompt("Scegli un numero da 1 a 5:"));
-console.log(userNumber);
+console.log("Il tuo numero:" + " " + userNumber);
 
 //! ELABORAZIONE
 // funzione che genera un un numero random (sempre da 1 a 5) per il computer
@@ -37,7 +37,22 @@ function randomNumberGenerate() {
 }
 
 const pcNumber = randomNumberGenerate();
-console.log(pcNumber);
+console.log("Il numero del PC:" + " " + pcNumber);
 
+//Sommiamo i due numeri
 const sum = userNumber + pcNumber;
-console.log(sum);
+console.log(userNumber + "+" + pcNumber + "=" + " " + sum);
+
+//funzione che stabilisce se la somma dei due numeri è pari o dispari
+function isoddOrEven(sum) {
+  const odd = sum % 2 === 0;
+
+  if (odd) {
+    return "Pari";
+  } else {
+    return "dispari";
+  }
+}
+
+const oddOrEven = isoddOrEven(sum);
+console.log(oddOrEven);
