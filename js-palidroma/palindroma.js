@@ -16,7 +16,11 @@
 
 //! RACCOLTA DATI
 // chiedere all'utente di inserire (prompt) una parola
-const userWord = prompt("Inserisci una parola:");
+let userWord = prompt("Inserisci una parola:");
+
+while (!isNaN(userWord)) {
+  userWord = prompt("Attenzione! Valore non valido. \n Inserisci una parola:");
+}
 console.log(userWord);
 
 //! ELABORAZIONE
@@ -28,7 +32,7 @@ function isPalindrome(userWord) {
 
   // scorri PER OGNI carattere della parola (userWord) fino alla sua metà
   for (let i = 0; i < userWordLength / 2; i++) {
-    // SE i caratteri di (userWord) non corriposndono ai caratteri all'estremità di (userWord)
+    // SE confrontando i caratteri di (userWord) non corriposndono ai caratteri all'estremità di (userWord)
     if (userWord[i] !== userWord[userWordLength - 1 - i]) {
       // restituisci
       return no;
