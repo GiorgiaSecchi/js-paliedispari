@@ -33,11 +33,8 @@ function isPalindrome(userWord) {
       // restituisci
       return no;
     }
-    // ALTRIMENTI
-    else {
-      return yes;
-    }
   }
+  return yes;
 }
 
 //! OUTPUT
