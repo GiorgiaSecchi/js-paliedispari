@@ -11,3 +11,21 @@
 //? 2. Ho bisogno di parametri?
 //? 3. Devo restituire un valore?
 //? 4. Se sì, di che tipo?
+
+/***************************************************************************** */
+
+//! RACCOLTA DATI
+// chiedere all'utente di inserire (prompt) una parola
+
+const userWord = prompt("Inserisci una parola:");
+console.log(userWord);
+
+//! ELABORAZIONE
+// considerando l'intera lunghezza di (userWord)
+const userWordLength = userWord.length;
+console.log(userWordLength);
+
+// la funzione dovrà verificare la parola inserita (userword) è palindroma o no
+function isPalindrome(userWord) {}
+
+//! OUTPUT
