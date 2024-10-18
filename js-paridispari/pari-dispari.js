@@ -26,8 +26,15 @@ let userChoise = prompt("Pari o Dispari ? \n Scrivi la tua scelta:");
 console.log(userChoise);
 
 // chiedere all'utente di inserire un numero da 1 a 5
-let userNumber = prompt("Scegli un numero da 1 a 5:");
+let userNumber = parseInt(prompt("Scegli un numero da 1 a 5:"));
 console.log(userNumber);
 
 //! ELABORAZIONE
 // funzione che genera un un numero random (sempre da 1 a 5) per il computer
+function randomNumberGenerate() {
+  const randomNumber = Math.floor(Math.random() * 5 + 1);
+  return randomNumber;
+}
+
+const pcNumber = randomNumberGenerate();
+console.log(pcNumber);
