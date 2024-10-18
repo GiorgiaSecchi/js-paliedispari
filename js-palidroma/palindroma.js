@@ -16,17 +16,31 @@
 
 //! RACCOLTA DATI
 // chiedere all'utente di inserire (prompt) una parola
-
 const userWord = prompt("Inserisci una parola:");
 console.log(userWord);
 
 //! ELABORAZIONE
-// considerando l'intera lunghezza di (userWord)
-
-const userWordLength = userWord.length;
-console.log(userWordLength);
-
 // la funzione dovrà verificare la parola inserita (userword) è palindroma o no
-function isPalindrome(userWord) {}
+function isPalindrome(userWord) {
+  // considerando l'intera lunghezza di (userWord)
+  const userWordLength = userWord.length;
+  console.log(userWordLength);
+
+  // scorri PER OGNI carattere della parola (userWord) fino alla sua metà
+  for (let i = 0; i < userWordLength / 2; i++) {
+    // SE i caratteri di (userWord) non corriposndono ai caratteri all'estremità di (userWord)
+    if (userWord[i] !== userWord[userWordLength - 1 - i]) {
+      // restituisci
+      return no;
+    }
+    // ALTRIMENTI
+    else {
+      return yes;
+    }
+  }
+}
 
 //! OUTPUT
+const yes = userWord + " " + "è una parola palindroma!";
+const no = userWord + " " + "non è una parola palindroma";
+const result = alert(isPalindrome(userWord));
