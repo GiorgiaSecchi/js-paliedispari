@@ -17,3 +17,17 @@
 //? 2. Ho bisogno di parametri?
 //? 3. Devo restituire un valore?
 //? 4. Se sì, di che tipo?
+
+/***************************************************************************** */
+
+//! RACCOLTA DATI
+// chiedere all'utente di scegliere pari o dispari e inserire la scelta (input)
+let userChoise = prompt("Pari o Dispari ? \n Scrivi la tua scelta:");
+console.log(userChoise);
+
+// chiedere all'utente di inserire un numero da 1 a 5
+let userNumber = prompt("Scegli un numero da 1 a 5:");
+console.log(userNumber);
+
+//! ELABORAZIONE
+// funzione che genera un un numero random (sempre da 1 a 5) per il computer
