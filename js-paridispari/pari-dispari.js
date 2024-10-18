@@ -38,3 +38,6 @@ function randomNumberGenerate() {
 
 const pcNumber = randomNumberGenerate();
 console.log(pcNumber);
+
+const sum = userNumber + pcNumber;
+console.log(sum);
