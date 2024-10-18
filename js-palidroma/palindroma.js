@@ -22,6 +22,7 @@ console.log(userWord);
 
 //! ELABORAZIONE
 // considerando l'intera lunghezza di (userWord)
+
 const userWordLength = userWord.length;
 console.log(userWordLength);
 
