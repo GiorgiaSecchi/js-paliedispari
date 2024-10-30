@@ -50,9 +50,26 @@ function isoddOrEven(sum) {
   if (odd) {
     return "Pari";
   } else {
-    return "dispari";
+    return "Dispari";
   }
 }
 
 const oddOrEven = isoddOrEven(sum);
 console.log(oddOrEven);
+
+let msgWinner = ``;
+
+function whoIsWinner() {
+  if (userChoise === oddOrEven) {
+    msgWinner = `Hai vinto!`;
+  } else {
+    msgWinner = `Ha vinto il PC!`;
+  }
+  return msgWinner;
+}
+
+const winner = whoIsWinner();
+
+//! OUTPUT
+//  Dichiariamo chi ha vinto.
+alert(winner);
