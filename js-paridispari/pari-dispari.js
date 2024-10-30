@@ -21,8 +21,20 @@
 /***************************************************************************** */
 
 //! RACCOLTA DATI
-// chiedere all'utente di scegliere pari o dispari e inserire la scelta (input)
-let userChoise = prompt("Pari o Dispari ? \n Scrivi la tua scelta:");
+// chiedere all'utente di scegliere pari o dispari e inserire la scelta (input) --> formattato poi in minuscolo e senza spazi
+let userChoise = prompt("Pari o Dispari ? \n Scrivi la tua scelta:")
+  .toLowerCase()
+  .trim();
+
+// verifica del valore inserito
+while (userChoise !== "pari" && userChoise !== "dispari") {
+  alert("Scelta non valida!");
+
+  userChoise = prompt("Pari o Dispari ? \n Scrivi la tua scelta:")
+    .toLowerCase()
+    .trim();
+}
+alert(`Hai scelto: ${userChoise}`);
 console.log("Hai scelto:" + " " + userChoise);
 
 // chiedere all'utente di inserire un numero da 1 a 5
@@ -48,9 +60,9 @@ function isoddOrEven(sum) {
   const odd = sum % 2 === 0;
 
   if (odd) {
-    return "Pari";
+    return "pari";
   } else {
-    return "Dispari";
+    return "dispari";
   }
 }
 
